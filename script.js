@@ -51,3 +51,8 @@ let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
+function cityTemperature(response) {
+  let temp = Math.round(response.data.temperature.current);
+  let showTemp = document.querySelector(".current-temperature-value");
+  showTemp.innerHTML = temp;
+}
